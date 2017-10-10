@@ -12,30 +12,26 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: Sampleproject-master_development
+  database: budget_development
   pool: 5
   username: postgres
   password: root
 
-  <<: *default
-  database: Sampleproject-master_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
- adapter: postgresql
+  adapter: postgresql
   encoding: unicode
-  database: Sampleproject-master_test
+  database: budget_test
   pool: 5
   username: postgres
   password: root
 
-  <<: *default
-  database: Sampleproject-master_test
- production:
-  <<: *default
-  database: Sampleproject-master_production
+  
+production:
+  database: budget_production
   username: postgres
   password: root
 
